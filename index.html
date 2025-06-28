@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>Landing Page</title>
@@ -14,7 +15,23 @@
     <div class="container">
       <h1>Welcome to Your New Landing Page</h1>
       <p>This is a clean template. Start building something amazing!</p>
+      <div>
+        <div id="n8n-chat" style="position: fixed; bottom: 1rem; right: 1rem;"></div>
+      </div>
     </div>
     <!-- <script type="module" src="/src/main.jsx"></script> -->
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+      createChat({
+        // 1️⃣  paste the Production URL you copied from the Webhook node
+        webhookUrl: 'https://skull42.app.n8n.cloud/webhook/67a9ab98-10bd-4640-9258-adbf1662765b',
+        // 2️⃣  optional tweaks
+        mode: 'window',            // "window" (default) or "fullscreen"
+        showWelcomeScreen: false,  // you already have your own headline
+        initialMessages: [],       // start with an empty history
+        metadata: { source: 'landing-page' } // anything you want mapped in the workflow
+      });
+    </script>
   </body>
 </html>
