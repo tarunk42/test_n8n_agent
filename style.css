@@ -1,0 +1,50 @@
+@import "tailwindcss";
+/* @tailwind components is removed in v4, utilities cover components */
+@tailwind utilities;
+
+/* Define CSS variables for light/dark mode */
+:root {
+  --bg: #ffffff;
+  --text: #1f2937; /* gray-800 */
+  --border: #d1d5db; /* gray-300 */
+}
+
+.dark {
+  --bg: #18181b;      /* zinc-900 */
+  --text: #e5e7eb;    /* gray-200 */
+  --border: #4b5563;  /* gray-700 */
+}
+
+/* Base body styles - apply variables */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0; /* Ensure no default body margin */
+  height: 100vh; /* Ensure body takes full viewport height */
+  width: 100vw; /* Ensure body takes full viewport width */
+  overflow: hidden; /* Prevent body scrollbars by default */
+  font-family: "Nunito", sans-serif; /* Apply Nunito font */
+  display: flex; /* For centering content */
+  justify-content: center; /* For centering content */
+  align-items: center; /* For centering content */
+  text-align: center; /* Center text within the container */
+}
+
+.container {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg); /* Ensure container respects theme */
+}
+
+/* Basic heading and paragraph styling */
+h1 {
+  font-size: 2.5rem; /* Tailwind's text-4xl */
+  font-weight: 700; /* Tailwind's font-bold */
+  margin-bottom: 1rem; /* Tailwind's mb-4 */
+}
+
+p {
+  font-size: 1.125rem; /* Tailwind's text-lg */
+  margin-bottom: 1.5rem; /* Tailwind's mb-6 */
+}
