@@ -24,14 +24,13 @@
       import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
       createChat({
-        // 1️⃣  paste the Production URL you copied from the Webhook node
-        webhookUrl: 'https://skull42.app.n8n.cloud/webhook/67a9ab98-10bd-4640-9258-adbf1662765b',
-        // 2️⃣  optional tweaks
-        mode: 'window',            // "window" (default) or "fullscreen"
-        showWelcomeScreen: false,  // you already have your own headline
-        initialMessages: [],       // start with an empty history
-        metadata: { source: 'landing-page' } // anything you want mapped in the workflow
+        webhookUrl: 'https://skull42.app.n8n.cloud/webhook/a5d4088e-4588-4bfd-8c48-89df16cfb91d>',
+        target: '#n8n-chat',
+        mode: 'window',
+        showWelcomeScreen: false,
+        metadata: { source: 'landing-page' }
       });
     </script>
+
   </body>
 </html>
